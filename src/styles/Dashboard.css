@@ -1,0 +1,95 @@
+.dashboard {
+    padding: 20px;
+    margin-left: 250px; /* Ajusta el margen izquierdo para que no se superponga con el sidebar */
+    height: 100vh; /* Asegura que el dashboard ocupe toda la altura de la ventana */
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es demasiado grande */
+}
+
+.dashboard h1 {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas */
+}
+
+.widgets {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que los widgets se envuelvan en múltiples líneas */
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que el contenido principal se envuelva en múltiples líneas */
+}
+
+.side-widgets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Ajusta el ancho para que ocupe el 100% en pantallas pequeñas */
+    max-width: 300px; /* Limita el ancho máximo */
+}
+
+.chart-container {
+    width: 100%; /* Ajusta el ancho para que ocupe el 100% en pantallas pequeñas */
+    max-width: 700px; /* Limita el ancho máximo */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard {
+        margin-left: 200px; /* Ajusta el margen izquierdo para pantallas más pequeñas */
+    }
+
+    .widgets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-widgets {
+        width: 100%;
+        max-width: none;
+    }
+
+    .chart-container {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        margin-left: 150px; /* Ajusta el margen izquierdo para pantallas más pequeñas */
+    }
+
+    .widgets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-widgets {
+        width: 100%;
+        max-width: none;
+    }
+
+    .chart-container {
+        width: 100%;
+        max-width: none;
+    }
+}
